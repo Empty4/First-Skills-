@@ -1,0 +1,43 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '37 2 * * 2'
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'python' ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Python Code Quality and Lint
+        uses: ricardochaves/python-lint@v1.3.0
+        with:
+          # Use Pylint
+          use-pylint: false
+          # Use pycodestyle
+          use-pycodestyle: false
+          # Use Flake8
+          use-flake8: true
+          # Use Black
+          use-black: false
+          # Use mypy
+          use-mypy: false
+          # Use isort
+          use-isort: false
