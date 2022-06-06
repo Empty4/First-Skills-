@@ -1,3 +1,3 @@
-number_one = int(input())
-number_two = int(input())
+number_one = float(input())
+number_two = float(input())
 print(number_one + number_two)
