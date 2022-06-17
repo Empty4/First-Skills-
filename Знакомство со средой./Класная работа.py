@@ -4,9 +4,9 @@ shout = 'Ауууу!', 'Ауууууу!'
 print(*shout)
 print(*shout)
 
-
 # Планета угадайка
 import random
+
 # игра-угадайка с планетами
 planets = ['Меркурий', 'Венера', 'Земля', 'Марс',
            'Юпитер', 'Сатурн', 'Уран', 'Нептун']
@@ -37,6 +37,5 @@ print(first_str)
 print(second_str)
 print(third_str)
 
-
 # Билетная касса
-print('Билет на', '"', first_str, '"', 'в', '"',second_str, '"','на', '"', third_str, '"', 'забронирован.')
+print('Билет на', '"', first_str, '"', 'в', '"', second_str, '"', 'на', '"', third_str, '"', 'забронирован.')
