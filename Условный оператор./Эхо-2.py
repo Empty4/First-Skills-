@@ -1,2 +1,2 @@
 word = input()
-print(word*4)
+print(word * 4)
