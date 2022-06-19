@@ -1,4 +1,5 @@
 n = 0
-while (number := int(input())) != 2 ** n:
+number = int(input())
+while number != 2 ** n:
     n += 1
-print(n)  # ответ не выводится, в пн разберёмся
+print(n)
