@@ -7,8 +7,8 @@ print('На какую сумму желаете сделать вклад?')
 money = float(input())
 if money <= 10000:
     money *= 1.1
-if 10000 <= money <= 100000:
+elif 10000 <= money <= 100000:
     money *= 1.2
-if 100000 <= money > 100000:
+elif 100000 <= money > 100000:
     money *= 1.3
 print('Вы получаете', money, '₽, поздравляем!')
