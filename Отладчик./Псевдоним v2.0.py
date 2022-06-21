@@ -1,4 +1,4 @@
-all_stones = int(input())  # я не доделала пока
+all_stones = int(input())
 II = 3
 while all_stones > 6:
     all_stones -= II
@@ -40,7 +40,6 @@ elif all_stones == 4:
     else:
         print('Некорректный ход:', player)
         player = int(input())
-    print(all_stones, 0)
     print('Вы выйграли!')
 elif all_stones == 5:
     II = 1
