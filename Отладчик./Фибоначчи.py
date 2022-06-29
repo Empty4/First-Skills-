@@ -6,5 +6,5 @@ if number > 1:
 while second < number:
     firsts = second
     second += first
-    first = firsts # спс
+    first = firsts  # спс
     print(first)
