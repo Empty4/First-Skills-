@@ -9,11 +9,11 @@ while all_stones > 6:
     else:
         print('Некорректный ход:', player)
         player = int(input())
-if all_stones < 4:
-    ii = all_stones
-    all_stones -= all_stones
+if 1 < all_stones < 4:
+    ii = all_stones - 1
+    all_stones -= ii
     print(ii, all_stones)
-    print('ИИ выиграл!')
+    print('Вы выйграли!')
 elif all_stones == 6:
     II = 2
     all_stones -= II
@@ -24,23 +24,21 @@ elif all_stones == 6:
     else:
         print('Некорректный ход:', player)
         player = int(input())
-    print(all_stones, 0)
+    ii = all_stones - 1
+    all_stones -= ii
+    print(all_stones, 1)
 elif all_stones == 4:
-    II = 1
+    II = 3
     all_stones -= II
     print(II, all_stones)
-    if 0 < (player := int(input())) < 4:
+    if 0 < (player := int(input())) < 4 and (player := int(input())) <= all_stones:
         all_stones -= player
         print(player, all_stones)
-        if all_stones == 3:
-            print(all_stones, 0)
-            print('Вы выйграли!')
-        else:
-            print(all_stones, 0)
+        print('ИИ выйграл!')
     else:
         print('Некорректный ход:', player)
         player = int(input())
-    print('Вы выйграли!')
+    print('ИИ выйграли!')
 elif all_stones == 5:
     II = 1
     all_stones -= II
@@ -51,5 +49,14 @@ elif all_stones == 5:
     else:
         print('Некорректный ход:', player)
         player = int(input())
-    print(all_stones, 0)
-    print('ИИ выиграл!')
+    print(all_stones - 1, 1)
+    if 0 < (player := int(input())) < 4:
+        all_stones -= player
+        print(player, all_stones)
+        print('Вы выиграли!')
+    else:
+        print('Некорректный ход:', player)
+        player = int(input())
+elif all_stones == 1:
+    print(1,0)
+    print('Вы выйграли!')
